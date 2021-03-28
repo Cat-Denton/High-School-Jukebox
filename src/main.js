@@ -5,9 +5,17 @@ import './css/styles.css';
 import SpotifyService from './spotify-service.js';
 
 async function testToken() {
-  const token = await SpotifyService.getToken();
-  console.log(token);
+  return token = await SpotifyService.getToken();
 }
 
-testToken();
+let token = testToken();
+
+async function testSearch(token) {
+  const search = await SpotifyService.getSearch(token);
+  console.log(token);
+  return search   
+}
+
+testSearch(token);
+
 
