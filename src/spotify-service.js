@@ -1,7 +1,7 @@
 export default class SpotifyService {
   static async getToken() {
     try {
-      const token = await fetch ('https://accounts.spotify.com/api/token', {
+      const response = await fetch ('https://accounts.spotify.com/api/token', {
         method: 'POST',
         headers: {
             'Content-Type' : 'application/x-www-form-urlencoded', 
@@ -9,11 +9,11 @@ export default class SpotifyService {
         },
         body: 'grant_type=client_credentials'
       });
-      console.log(token)
-      if (!token.ok) {
-        throw Error(token.statusText)
+      if (!response.ok) {
+        throw Error(response.statusText)
       }
-      return token.json();
+      const token = await response.json();
+      return token.access_token
     } catch(error) {
       return error.message
     }
@@ -21,15 +21,16 @@ export default class SpotifyService {
   }
   static async getSearch(token) {
     try {
-      const result = await fetch('https://api.spotify.com/v1/search?q=year%3A1994&type=track', {
+      debugger
+      const response = await fetch('https://api.spotify.com/v1/search?q=1994&type=track', {
         method: 'GET',
-        headers: { 'Authorization' : 'Bearer' + token}
+        headers: { 'Authorization' : 'Bearer ' + token}
       
       });
-     if (!result) {
-       throw Error(result.statusText)
+     if (!response.ok) {
+       throw Error(response.statusText)
      }
-     return result.json()  
+     return response.json()  
     } catch(error){
       return error.message
     }
