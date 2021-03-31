@@ -9,15 +9,12 @@ async function testToken() {
   return token;
 }
 
-// let token = testToken();
-
 async function testSearch() {
   const token = await testToken();
   const search = await SpotifyService.getSearch(token);
-  console.log(search)
   return search   
 }
 
-testSearch();
+console.log(testSearch());
 
 
