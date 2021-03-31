@@ -5,17 +5,19 @@ import './css/styles.css';
 import SpotifyService from './spotify-service.js';
 
 async function testToken() {
-  return token = await SpotifyService.getToken();
+  const token = await SpotifyService.getToken();
+  return token;
 }
 
-let token = testToken();
+// let token = testToken();
 
-async function testSearch(token) {
+async function testSearch() {
+  const token = await testToken();
   const search = await SpotifyService.getSearch(token);
-  console.log(token);
+  console.log(search)
   return search   
 }
 
-testSearch(token);
+testSearch();
 
 
