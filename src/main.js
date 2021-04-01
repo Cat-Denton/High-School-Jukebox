@@ -6,7 +6,7 @@ import SpotifyService from './spotify-service.js';
 
 async function testToken() {
   const token = await SpotifyService.getToken();
-  return token;
+  return token
 }
 
 async function testSearch() {

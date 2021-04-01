@@ -21,8 +21,7 @@ export default class SpotifyService {
   }
   static async getSearch(token) {
     try {
-      debugger
-      const response = await fetch('https://api.spotify.com/v1/search?q=1994&type=track', {
+      const response = await fetch('https://api.spotify.com/v1/search?q=year%3A1994&type=track', {
         method: 'GET',
         headers: { 'Authorization' : 'Bearer ' + token}
       
@@ -30,7 +29,7 @@ export default class SpotifyService {
      if (!response.ok) {
        throw Error(response.statusText)
      }
-     return response.json()  
+     return await response.json()  
     } catch(error){
       return error.message
     }
