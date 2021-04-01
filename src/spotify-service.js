@@ -30,7 +30,7 @@ export default class SpotifyService {
      if (!response.ok) {
        throw Error(response.statusText)
      }
-     return response.json()  
+     return await response.json()  
     } catch(error){
       return error.message
     }
