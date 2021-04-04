@@ -5,6 +5,7 @@ import './css/styles.css';
 import SpotifyService from './spotify-service.js';
 
 $("#input-form").submit(function(event) {
+  clearFields();
   const birthDate = $("#DOB").val();
   const birthYear = parseInt(birthDate.slice(0,4));
   const hsYears = [(birthYear)+14,(birthYear)+18];
@@ -12,6 +13,10 @@ $("#input-form").submit(function(event) {
   outputSearch(genre,hsYears)
   event.preventDefault();
 })
+
+function clearFields() {
+  $("#songList").text("");
+}
 
 async function testToken() {
   const token = await SpotifyService.getToken();
