@@ -26,7 +26,6 @@ async function testToken() {
 async function outputSearch(genre,years) {
   const token = await testToken();
   const search = await SpotifyService.getSearch(token,genre,years);
-  // debugger
   search.tracks.items.forEach(function(element) {
     $("#songList").append("<li>" + element.name)
   })

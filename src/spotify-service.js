@@ -26,7 +26,6 @@ export default class SpotifyService {
         headers: { 'Authorization' : 'Bearer ' + token}
       
       });
-      debugger
      if (!response.ok) {
        throw Error(response.statusText)
      }
