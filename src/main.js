@@ -1,4 +1,4 @@
-// import $ from 'jquery';
+import $ from 'jquery';
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/styles.css';
@@ -12,9 +12,17 @@ async function testToken() {
 async function testSearch() {
   const token = await testToken();
   const search = await SpotifyService.getSearch(token);
-  return search   
+  // console.log(search)
+  // debugger
+  search.tracks.items.forEach(function(element) {
+    $("#songList").append("<li>" + element.name)
+  })
 }
 
-console.log(testSearch());
+testSearch();
+
+// $("#songList").html(output.items[0]);
+
+
 
 
