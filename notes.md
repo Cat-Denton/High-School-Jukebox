@@ -17,7 +17,7 @@ Things needed to achieve level 1:
       
       Output:
       <div id=hiddenOutput></div> (Css: #hiddenOutput display:none)
-        <div id=songList></div> (generated from javscript)
+        <ol id=songList></ol> (generated from javscript)
         <div id=errorOutput></div> (generated from javscript)
 
       *further exploration* look into adding a player to the website. 

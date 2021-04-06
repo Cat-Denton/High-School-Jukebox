@@ -19,12 +19,26 @@ export default class SpotifyService {
     }
 
   }
-  static async getSearch(token) {
+  static async getSearch(token,genre,years) {
     try {
-      const response = await fetch('https://api.spotify.com/v1/search?q=year%3A1994&type=track', {
+      const response = await fetch(`https://api.spotify.com/v1/search?q=year%3A${years[0]}-${years[1]}%20genre%3A${genre}&type=track`, {
         method: 'GET',
         headers: { 'Authorization' : 'Bearer ' + token}
       
+      });
+     if (!response.ok) {
+       throw Error(response.statusText)
+     }
+     return await response.json()  
+    } catch(error){
+      return error.message
+    }
+  }
+  static async getInfo(token) {
+    try {
+      const response = await fetch(`https://api.spotify.com/v1/browse/categories?country=US`, {
+        method: 'GET',
+        headers: { 'Authorization' : 'Bearer ' + token}
       });
      if (!response.ok) {
        throw Error(response.statusText)

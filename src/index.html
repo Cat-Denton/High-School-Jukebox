@@ -1,5 +1,31 @@
+<!DOCTYPE html>
 <head>
   <title>jsEnvTemplate</title>
 </head>
 <body>
+<div class="container">
+  <div class="jumbotron">
+    <h1> Welcome to the Spotify-High-School-Jukebox </h1>
+    <form id="input-form"> 
+      <label for="DOB"> Please enter your date of birth (mm/dd/yyyy):></label>
+      <input id="DOB" type="date" required>
+      <p> Please select a genre: </p>
+      <select id="inputGenre" required>
+          <option value="rock">Rock</option>
+          <option value="pop">Pop</option>
+          <option value="jazz">Jazz</option>
+          <option value="r&b">R&B</option>
+          <option value="hip-hop">Hip Hop</option>
+          <option value="alternative">Alternative</option>
+          <option value="metal">Metal</option>
+          <option value="latin">Latin</option>
+          <option value="edm">EDM</option>
+          <option value="country">Country</option>
+      </select>
+      <button type="submit">Submit</button>
+      </form>
+    <p> Here is a list of songs from high school:</p>
+    <ol id=songList></ol>
+  </div>
+</div>
 </body>
