@@ -25,11 +25,14 @@ async function testToken() {
 
 async function outputSearch(genre,years) {
   const token = await testToken();
+  const info = await SpotifyService.getInfo(token);
+  info.categories.items.forEach(function(element){
+    $("#inputGenre").append(`<option value=${element.id}>${element.id}</option>`)});
   const search = await SpotifyService.getSearch(token,genre,years);
   search.tracks.items.forEach(function(element) {
     $("#songList").append("<li>" + element.name)
   })
-}
+} 
 
 
 
