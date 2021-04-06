@@ -4,15 +4,22 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/styles.css';
 import SpotifyService from './spotify-service.js';
 
+$(document).ready( async function() {
+  const token = await testToken();
+  const genreList = await SpotifyService.getGenres(token);
+  genreList.genres.forEach(function(element){
+    $("#inputGenre").append(`<option value=${element}>${element[0].toUpperCase() + element.substring(1)}</option>`);
+  });
+});
 $("#input-form").submit(function(event) {
   clearFields();
   const birthDate = $("#DOB").val();
   const birthYear = parseInt(birthDate.slice(0,4));
   const hsYears = [(birthYear)+14,(birthYear)+18];
-  const genre = $("#inputGenre").val()
-  outputSearch(genre,hsYears)
+  const genre = $("#inputGenre").val();
+  outputSearch(genre,hsYears);
   event.preventDefault();
-})
+});
 
 function clearFields() {
   $("#songList").text("");
@@ -20,18 +27,15 @@ function clearFields() {
 
 async function testToken() {
   const token = await SpotifyService.getToken();
-  return token
+  return token;
 }
 
 async function outputSearch(genre,years) {
   const token = await testToken();
-  const info = await SpotifyService.getInfo(token);
-  info.categories.items.forEach(function(element){
-    $("#inputGenre").append(`<option value=${element.id}>${element.id}</option>`)});
   const search = await SpotifyService.getSearch(token,genre,years);
   search.tracks.items.forEach(function(element) {
-    $("#songList").append("<li>" + element.name)
-  })
+    $("#songList").append("<li>" + element.name);
+  });
 } 
 
 
