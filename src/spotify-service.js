@@ -34,5 +34,19 @@ export default class SpotifyService {
       return error.message
     }
   }
+  static async getInfo(token) {
+    try {
+      const response = await fetch(`https://api.spotify.com/v1/browse/categories?country=US`, {
+        method: 'GET',
+        headers: { 'Authorization' : 'Bearer ' + token}
+      });
+     if (!response.ok) {
+       throw Error(response.statusText)
+     }
+     return await response.json()  
+    } catch(error){
+      return error.message
+    }
+  }
 }
 
