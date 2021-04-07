@@ -18,9 +18,19 @@ $("#input-form").submit(function(event) {
   const hsYears = [(birthYear)+14,(birthYear)+18];
   const genre = $("#inputGenre").val();
   outputSearch(genre,hsYears);
+  changeView();
   event.preventDefault();
 });
 
+function changeView(){
+  $("#input-form").hide();
+  $("#hiddenOutput").show();
+};
+
+function getName(fullName){
+  let array = fullName.split(/[ ,]+/)
+  return array[0];
+}
 function clearFields() {
   $("#songList").text("");
 }
@@ -31,9 +41,12 @@ async function testToken() {
 }
 
 async function outputSearch(genre,years) {
+  const fullName = $("#name").val();
+  let name = getName(fullName);
   const token = await testToken();
   const search = await SpotifyService.getSearch(token,genre,years);
   search.tracks.items.forEach(function(element) {
+    $('.list').text(`Hello ${name}, here is a list of your personalized songs from high school:`)
     $("#songList").append("<li>" + element.name);
   });
 } 
