@@ -26,19 +26,16 @@
                 <div class="card-heading"></div>
                 <div class="card-body">
                     <h2 class="title">High School Jukebox!</h2>
-                    <div id=hiddenOutput>
-                        <h4 class="list">Here is a list of your personalized songs from high school:</h4>
-                        <ol id=songList></ol>
-                    </div>
-                        <form id="input-form">
+                    <p> Here is a list of songs from high school:</p>
+    <ol id=songList></ol>
+                    <form method="POST">
                         <div class="user-input">
                         <div class="input-group">
-                            <input class="input--style-3" type="text" placeholder="Name" name="name" id="name">
+                            <input class="input--style-3" type="text" placeholder="Name" name="name">
                         </div>
                         <div class="input-group">
-                            <input id="DOB" placeholder="Birthdate" type="date" required>
-                            <!-- <input class="input--style-3 js-datepicker" type="text" placeholder="Birthdate" name="birthday" id="DOB">
-                            <i class="zmdi zmdi-calendar-note input-icon js-btn-calendar"></i> -->
+                            <input class="input--style-3 js-datepicker" type="text" placeholder="Birthdate" name="birthday" id="DOB" required>>
+                            <i class="zmdi zmdi-calendar-note input-icon js-btn-calendar"></i>
                         </div>
                         <div class="input-group">
                             <div class="rs-select2 js-select-simple select--no-search">
@@ -49,15 +46,13 @@
                         </div>
                         <div class="p-t-deadspace">
                         </div>
-                        <button class="btn btn--pill btn--green" type="submit">Submit</button>
+                          <button class="btn btn--pill btn--green" type="submit">Submit</button>
                     </div>
                     </form>
-                    
                 </div>
             </div>
         </div>
     </div>
-
 
     <!-- Jquery JS-->
     <script src="vendor/jquery/jquery.min.js"></script>
@@ -73,33 +68,3 @@
 
 </html>
 
-
-
-
-
-
-
-
-<!-- 
-<!DOCTYPE html>
-<head>
-  <title>jsEnvTemplate</title>
-</head>
-<body>
-<div class="container">
-  <div class="jumbotron">
-    <h1> Welcome to the Spotify-High-School-Jukebox </h1>
-    <form id="input-form"> 
-      <label for="DOB"> Please enter your date of birth (mm/dd/yyyy):></label>
-      <input id="DOB" type="date" required>
-      <p> Please select a genre: </p>
-      <select id="inputGenre" required>
-
-      </select>
-      <button type="submit">Submit</button>
-      </form>
-    <p> Here is a list of songs from high school:</p>
-    <ol id=songList></ol>
-  </div>
-</div>
-</body> -->

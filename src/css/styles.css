@@ -207,7 +207,7 @@
         100% {
             background-position: 0% 50%;
         }; */
-  /* } */
+  
   
   /* ==========================================================================
      #SPACING
@@ -507,6 +507,24 @@
     font-weight: 400;
     margin-bottom: 36px;
   }
+  /* ==========================================================================
+     #Hidden output / results
+     ===================================================== */
+     #hiddenOutput {
+       display: none;
+     }
+   .list {
+    font-size: 15px;
+    color: #fff;
+    font-weight: 400;
+    margin-bottom: 36px;
+   }
+   #songList {
+    font-size: 15px;
+    color: #fff;
+    font-weight: 400;
+    margin-bottom: 36px;
+   }
   
   /* ==========================================================================
      #CARD
