@@ -4,7 +4,7 @@
 ### _"Oldies but Goodies"_ 
 
 
-#### A Spotify tracklist generator based on users age to find the top tracks from user's high-school years. 
+#### A Spotify tracklist generator based on users age and genre to find the top tracks from user's high-school years. 
 
 #### By _**Cat Denton**_ , _**Faisal Rana**_ ,_**Marni Sucher**_ , _**Karlson Drendel**_ and _**Sofia Acosta**_. 
 
@@ -24,10 +24,12 @@
 * eslint-loader 3.0.0
 * Jest 24.9.0
 * Webpack 4.39.3 
+* Spotify Web Api 
+* OAuth2 Client credential flow 
 ```
 
 ## Description
-Provide your name and date of birth and this application will return the tracklist of top songs from your high-school era. A little time machine that will put together a list of your favorite tracks that will take you back in time. 
+Provide your name and date of birth and chose a genre and this application will return the tracklist of top songs from your high-school era. A little time machine that will put together a list of your favorite tracks that will take you back in time. 
 
 
 ## Setup/Installation Requirements
@@ -38,16 +40,18 @@ Provide your name and date of birth and this application will return the trackli
 * Create a file to store variables you want to keep secret `touch .env`
 * Create production environment with terminal command `npm run build`
 * Visit [Developer Spotify](https://developer.spotify.com/documentation/web-api/) and connect Spotify Developer to your Spotify account or create a new Spotify account
-* Create a Spotify API Client ID and Spotify API Client Secret and store them in your `.env` file
+* Create a New App in developer account to get Client ID and Client Secret. 
+* Store your client ID and client secret in your .env file with the following variable names: CLIENT_ID= CLIENT_SECRET=
 * Start server with command `npm run start`
-* We are using "Search for an Item" endpoint. Please read additional information [here](https://developer.spotify.com/documentation/web-api/reference/#endpoint-search). You can also navigate through all set of [endpoints](https://developer.spotify.com/documentation/web-api/reference/).
-
-
 
 ## Known Bugs
 * none
 
-
+## Notes and Resources
+* We are using "Search for an Item" endpoint. Please read additional information [here](https://developer.spotify.com/documentation/web-api/reference/#endpoint-search). You can also navigate through all available [API's](https://developer.spotify.com/documentation/web-api/reference/). 
+* The type of authentication we are using is OAUTH2 and the authorization flow is 'client credentials flow'
+![client flow](/images/client_flow.png)
+* Code pen for [Neon Sign](https://codepen.io/KevinOgden/pen/JEwjBB) 
 ## License
 * [MIT](https://choosealicense.com/licenses/mit)
 
