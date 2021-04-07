@@ -1,3 +1,17 @@
+::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+}
+
+
+input[type="date"]:before {
+  content: attr(placeholder) !important;
+  color: #aaa;
+  margin-right: 0.5em;
+}
+input[type="date"]:focus:before,
+input[type="date"]:valid:before {
+  content: "";
+}
 
 /* ==========================================================================
    #FONT
@@ -528,7 +542,7 @@
   }
   
   .bg-gra-01 {
-    background: linear-gradient(-45deg,#59F590,#35D16C, #1DB954,#13AF4A, #2E52EC, #fbc2eb,#FFDAFF,#FFE6FF );
+    background: linear-gradient(-45deg,#1db954,#1ed760, #1db954,#0e8a3a, #2E52EC, #fbc2eb,#FFDAFF,#FFE6FF );
       background-size: 400% 400%;
       animation: gradient 15s ease infinite;
   }
@@ -923,6 +937,9 @@
     width: 100%;
     display: table;
     min-height: 591px;
+    border-radius: 10px solid;
+    border-image-source: linear-gradient(45deg, rgb(0,143,104), rgb(250,224,66));
+    border-image-slice: 1;
   }
   
   .card-3 .card-heading {
@@ -948,8 +965,16 @@
     box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
     width: 100%;
     display: table;
+    border-radius: 10px solid;
+    border-image-source: linear-gradient(45deg, rgb(0,143,104), rgb(250,224,66));
+    border-image-slice: 1;
   }
   
+  iframe {
+    border-radius: 25px;
+    overflow:hidden;
+    width:250;
+  }
   
   .card-4 .card-body {
     padding: 57px 65px;

@@ -4,22 +4,11 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/styles.css';
 import SpotifyService from './spotify-service.js';
 
-// cardScreen(function() {
-//   $('.card-landing').fadeOut('fast');
-// }, 1000);
-
 window.onload = setTimeout(function() {
   $('.card-landing').fadeOut("slow");
- }, 3000 );
+ }, 1000 );
 
-// $(window).on('load',function() {
-//   $('.card-landing').fadeOut('fast');
-// }, 1000);
 
-// setTimeout(function() {
-//   $('#final_msg').fadeOut();
-//   $('#name, #email, #msg, #origin').val('')
-//  }, 10000 );
 
 $(document).ready( async function() {
   const token = await testToken();
@@ -36,6 +25,9 @@ $("#input-form").submit(function(event) {
   const genre = $("#inputGenre").val();
   outputSearch(genre,hsYears);
   changeView();
+  $('html,body').animate({
+    scrollTop: $("#hiddenOutput").offset().top},
+    'slow');
   event.preventDefault();
 });
 
@@ -63,13 +55,12 @@ async function outputSearch(genre,years) {
   const token = await testToken();
   const search = await SpotifyService.getSearch(token,genre,years);
   search.tracks.items.forEach(function(element) {
-    $('.list').text(`Hello ${name}. Feeling Nostalgic? Here's a list of songs from high school.`);
-    $("#songList").append("<li>" + element.name + "-" + element.artists[0].name + " (" + element.album.release_date.slice(0,4) + ")");
+    $('.list').text(`Hello ${name}, here is a list of your personalized songs from high school:`);
+    $("#songList").append("<li>" + " (" + element.album.release_date.slice(0,4) + ")" + "<br>" + ` <iframe src="https://open.spotify.com/embed/track/${element.id}" align="center" width="250" height="100" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>`);
   });
 } 
 
 
-
-
+// + element.name + "-" + element.artists[0].name 
 
 
