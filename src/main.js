@@ -6,7 +6,7 @@ import SpotifyService from './spotify-service.js';
 
 window.onload = setTimeout(function() {
   $('.card-landing').fadeOut("slow");
- }, 1000 );
+ }, 4000 );
 
 
 
@@ -55,8 +55,8 @@ async function outputSearch(genre,years) {
   const token = await testToken();
   const search = await SpotifyService.getSearch(token,genre,years);
   search.tracks.items.forEach(function(element) {
-    $('.list').text(`Hello ${name}, here is a list of your personalized songs from high school:`);
-    $("#songList").append("<li>" + " (" + element.album.release_date.slice(0,4) + ")" + "<br>" + ` <iframe src="https://open.spotify.com/embed/track/${element.id}" align="center" width="250" height="100" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>`);
+    $('.list').text(`Hello ${name}. Feeling Nostalgic? Here's a list of songs from high school.`);
+    $("#songList").append("<li>" + element.name + "-" + element.artists[0].name+ element.album.release_date.slice(0,4) + "<br>" + ` <iframe src="https://open.spotify.com/embed/track/${element.id}" align="center" width="250" height="100" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>`);
   });
 } 
 

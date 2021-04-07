@@ -1,6 +1,9 @@
 ::-webkit-calendar-picker-indicator {
   filter: invert(1);
 }
+::-webkit-input-placeholder { 
+  color: #000000;
+}
 
 
 input[type="date"]:before {
@@ -558,21 +561,6 @@ input[type="date"]:valid:before {
           background-position: 0% 50%;
       }
   }
-    /* background: -webkit-gradient(linear, left bottom, left top, from(#fbc2eb), to(#a18cd1));
-    background: -webkit-linear-gradient(bottom, #1DB954 0%, #a18cd1 100%);
-    background: -moz-linear-gradient(bottom, #1DB954 0%, #a18cd1 100%);
-    background: -o-linear-gradient(bottom,#1DB954 0%, #a18cd1 100%);
-    background: linear-gradient(to top, #1DB954 0%, #a18cd1 100%);
-      animation: gradient 15s ease infinite;
-        0% {
-            background-position: 0% 50%;
-        }
-        50% {
-            background-position: 100% 50%;
-        }
-        100% {
-            background-position: 0% 50%;
-        }; */
   
   
   /* ==========================================================================
@@ -795,6 +783,16 @@ input[type="date"]:valid:before {
   .rs-select2 .select2-container {
     width: 100% !important;
     outline: none;
+  }
+
+  #inputGenre {
+    background:#000000; 
+    padding: 5px 0;
+    margin: 19px;
+    font-size: 16px; 
+    color: #ccc; 
+    background: transparent;
+    right: 100%;
   }
   
   .rs-select2 .select2-container .select2-selection--single {
