@@ -6,7 +6,7 @@ import SpotifyService from './spotify-service.js';
 
 window.onload = setTimeout(function() {
   $('.card-landing').fadeOut("slow");
- }, 1000 );
+ }, 4000 );
 
 
 
