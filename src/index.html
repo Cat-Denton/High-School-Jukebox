@@ -3,31 +3,26 @@
 
 <head>
     <title>Spotify-High-School-Jukebox</title>
-
-    <!-- Icons font CSS-->
-    <link href="/src/vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
-
-    <link href="/src/vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
-    
-    <!-- Font special for pages-->
-    <link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet"> 
-
-    <!-- Vendor CSS-->
-    <link href="/src/vendor/select2/select2.min.css" rel="stylesheet" media="all">
-    <link href="/src/vendor/datepicker/daterangepicker.css" rel="stylesheet" media="all">
-
-    <!-- Main CSS-->
-    <link href="/src/css/styles.css" rel="stylesheet" media="all">
-</head>
-
-<body>
-    <div class="card-landing">
+    <div class="card-landing" style="background: -webkit-gradient(linear, left bottom, left top, from(#191414), to(#000000));
+    background: -webkit-linear-gradient(bottom, #191414 0%, #000000 100%);
+    background: -moz-linear-gradient(bottom, #191414 0%, #000000 100%);
+    background: -o-linear-gradient(bottom, #191414 0%, #000000 100%);
+    background: linear-gradient(to top, #191414 0%, #000000 100%);
+    position: fixed;
+    bottom: 0px;
+    width: 100vw;
+    height: 100%;
+    z-index: 1;
+    display: flex;">
         <div id="neonSignLarge">
             <h3>H<span id="offset">I</span>G<span id="offset">H</span> S<span id="offset">CH</span>O<span id="offset">OL</span>
             </h3>
             <h1><span id="offset">J</span>U<span id="offset">KE</span> B<span id="offset">OX</span></h1>
         </div>
     </div>
+</head>
+
+<body>
     <div class="page-wrapper bg-gra-01 p-t-180 p-b-100 font-poppins">
         <div class="wrapper wrapper--w780">
             <div class="card card-3">
@@ -83,49 +78,6 @@
             </div>
         </div>
     </div>
-
-
-    <!-- Jquery JS-->
-    <script src="/src/vendor/jquery/jquery.min.js"></script>
-    <!-- Vendor JS-->
-    <script src="/src/vendor/select2/select2.min.js"></script>
-    <script src="/src/vendor/datepicker/moment.min.js"></script>
-    <script src="/src/vendor/datepicker/daterangepicker.js"></script>
-
-    <!-- Main JS-->
-    <script src="/src/js/global.js"></script>
-
 </body>
 
 </html>
-
-
-
-
-
-
-
-
-<!-- 
-<!DOCTYPE html>
-<head>
-  <title>jsEnvTemplate</title>
-</head>
-<body>
-<div class="container">
-  <div class="jumbotron">
-    <h1> Welcome to the Spotify-High-School-Jukebox </h1>
-    <form id="input-form"> 
-      <label for="DOB"> Please enter your date of birth (mm/dd/yyyy):></label>
-      <input id="DOB" type="date" required>
-      <p> Please select a genre: </p>
-      <select id="inputGenre" required>
-
-      </select>
-      <button type="submit">Submit</button>
-      </form>
-    <p> Here is a list of songs from high school:</p>
-    <ol id=songList></ol>
-  </div>
-</div>
-</body> -->

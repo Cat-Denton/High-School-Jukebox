@@ -37,12 +37,15 @@ function validateYear(birthYear){
   const tooYoung = thisYear-18
   if (birthYear > thisYear || birthYear <= 1894){
     $('#error').text(`Please enter a valid Birthday.`).fadeIn("slow");
-    }
+    event.preventDefault();
+    throw ''
+  }
   else if (birthYear > tooYoung){
     $('#error').text(`Hello! Come back in a few years and we'll have data for YOU, kiddo!`).fadeIn("slow");
+    event.preventDefault();
+    throw ''
   }
-  event.preventDefault();
-  throw ''
+  
 }
 
 function changeView(){
