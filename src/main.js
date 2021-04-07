@@ -6,7 +6,7 @@ import SpotifyService from './spotify-service.js';
 
 window.onload = setTimeout(function() {
   $('.card-landing').fadeOut("slow");
- }, 4000 );
+ }, 1000 );
 
 
 
@@ -23,6 +23,7 @@ $("#input-form").submit(function(event) {
   const birthYear = parseInt(birthDate.slice(0,4));
   const hsYears = [(birthYear)+14,(birthYear)+18];
   const genre = $("#inputGenre").val();
+  validateYear(birthYear);
   outputSearch(genre,hsYears);
   changeView();
   $('html,body').animate({
@@ -30,6 +31,19 @@ $("#input-form").submit(function(event) {
     'slow');
   event.preventDefault();
 });
+
+function validateYear(birthYear){
+  const thisYear = new Date().getFullYear();
+  const tooYoung = thisYear-18
+  if (birthYear > thisYear || birthYear <= 1894){
+    $('#error').text(`Please enter a valid Birthday.`).fadeIn("slow");
+    }
+  else if (birthYear > tooYoung){
+    $('#error').text(`Hello! Come back in a few years and we'll have data for YOU, kiddo!`).fadeIn("slow");
+  }
+  event.preventDefault();
+  throw ''
+}
 
 function changeView(){
   $("#hiddenInputs").hide();
@@ -56,7 +70,7 @@ async function outputSearch(genre,years) {
   const search = await SpotifyService.getSearch(token,genre,years);
   search.tracks.items.forEach(function(element) {
     $('.list').text(`Hello ${name}. Feeling Nostalgic? Here's a list of songs from high school.`);
-    $("#songList").append("<li>" + element.name + "-" + element.artists[0].name+ element.album.release_date.slice(0,4) + "<br>" + ` <iframe src="https://open.spotify.com/embed/track/${element.id}" align="center" width="250" height="100" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>`);
+    $("#songList").append("<li>" + (element.name + "-" + element.artists[0].name+ element.album.release_date.slice(0,4)) + "<br>" + ` <iframe src="https://open.spotify.com/embed/track/${element.id}" align="center" width="250" height="100" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>`);
   });
 } 
 

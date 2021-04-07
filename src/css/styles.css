@@ -15,6 +15,22 @@ input[type="date"]:focus:before,
 input[type="date"]:valid:before {
   content: "";
 }
+/* ==========================================================================
+   #ERROR
+   ========================================================================== */
+  #error{
+    text-align: center;
+    color:#FF00E6;
+      font-family: 'Raleway', sans-serif;
+      font-size:18px;
+      letter-spacing:10px;
+      animation: text-flicker 2s linear infinite;
+      font-weight: 400;
+      margin-bottom: 36px;
+      height: 20%;
+  }
+
+
 
 /* ==========================================================================
    #FONT
@@ -908,7 +924,6 @@ input[type="date"]:valid:before {
       background: -moz-linear-gradient(bottom, #191414 0%, #000000 100%);
       background: -o-linear-gradient(bottom, #191414 0%, #000000 100%);
       background: linear-gradient(to top, #191414 0%, #000000 100%);
-      /* #000000 #191414 */
       position: fixed;
       bottom: 0px;
       width: 100vw;
