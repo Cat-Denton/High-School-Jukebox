@@ -25,12 +25,12 @@ export default class SpotifyService {
         method: 'GET',
         headers: { 'Authorization' : 'Bearer ' + token}
       });
-     if (!response.ok) {
-        throw Error(response.statusText)
+      if (!response.ok) {
+        throw Error(response.statusText);
       }
-     return await response.json()  
+      return await response.json();
     } catch(error){
-      return error.message
+      return error.message;
     }
   }
   static async getGenres(token) {
@@ -39,12 +39,12 @@ export default class SpotifyService {
         method: 'GET',
         headers: { 'Authorization' : 'Bearer ' + token}
       });
-     if (!response.ok) {
-       throw Error(response.statusText)
-     }
-     return await response.json()  
+      if (!response.ok) {
+        throw Error(response.statusText);
+      }
+      return await response.json();
     } catch(error){
-      return error.message
+      return error.message;
     }
   }
 }
