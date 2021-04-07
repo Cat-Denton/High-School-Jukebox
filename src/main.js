@@ -23,12 +23,12 @@ $("#input-form").submit(function(event) {
 });
 
 function changeView(){
-  $("#input-form").hide();
+  $("#hiddenInputs").hide();
   $("#hiddenOutput").show();
-};
+}
 
 function getName(fullName){
-  let array = fullName.split(/[ ,]+/)
+  let array = fullName.split(/[ ,]+/);
   return array[0];
 }
 function clearFields() {
@@ -46,7 +46,7 @@ async function outputSearch(genre,years) {
   const token = await testToken();
   const search = await SpotifyService.getSearch(token,genre,years);
   search.tracks.items.forEach(function(element) {
-    $('.list').text(`Hello ${name}, here is a list of your personalized songs from high school:`)
+    $('.list').text(`Hello ${name}, here is a list of your personalized songs from high school:`);
     $("#songList").append("<li>" + element.name);
   });
 } 
