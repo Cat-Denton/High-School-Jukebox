@@ -289,7 +289,7 @@
   }
   
   .btn--green {
-    background: #57b846;
+    background: grey;
   }
   
   .btn--green:hover {
@@ -326,6 +326,10 @@
     display: none;
     border: 1px solid #e0e0e0;
     margin-top: 5px;
+  }
+
+  label {
+    color:white;
   }
   
   .daterangepicker::after, .daterangepicker::before {
@@ -523,7 +527,7 @@
    li {
      padding:5px;
    }
-   
+
    #songList {
     font-size: 15px;
     color:white;
