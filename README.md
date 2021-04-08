@@ -1,39 +1,3 @@
-<<<<<<< HEAD
-# _Title_
-
-#### _Short Description_
-
-#### By _**Cat Denton**_
-
-## Technologies Used
-
-* Javascript
-* Node Package Manager
-* Jest
-* HTML
-* CSS
-* Bootstrap
-* Jquery-3.5.1
-
-## Description
-
-_long description_
-
-## Setup/Installation Requirements
-
-* Clone repository to local drive
-* Open code with a text editor
-* Install NPM
-* Type npm run start
-
-## Known Bugs
-
-* none
-
-## License
-
-Copyright <YEAR> Cat Denton
-=======
 # _High-School Jukebox_   📻 🎶 
 
 
@@ -89,7 +53,6 @@ Provide your name and date of birth and this application will return the trackli
 
 
 Copyright 2021 Cat Denton, Faisal Rana, Karlson Drendel, MarniSucher, Sofia Acosta
->>>>>>> bcf50e911de2cf3dce7313846a35fb054cf9302b
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
@@ -97,17 +60,10 @@ The above copyright notice and this permission notice shall be included in all c
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-
-<<<<<<< HEAD
-
-## Contact Information
-
-_Cat Denton <willwdenton@gmail.com>_
-=======
 ## Contact Information
 * _Cat Denton <willwdenton@gmail.com>_ 
 * _Faisal Rana <inquisitive@gmail.com>_
 * _Karlson Drendel <kdrendel99@gmail.com>_
 * _Marni Sucher <marni>_
 * _Sofia Acosta <sofiaacostarascon@gmail.com>_
->>>>>>> bcf50e911de2cf3dce7313846a35fb054cf9302b
+
