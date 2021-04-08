@@ -73,7 +73,7 @@ async function outputSearch(genre,years) {
   const search = await SpotifyService.getSearch(token,genre,years);
   search.tracks.items.forEach(function(element) {
     $('.list').text(`Hello ${name}. Feeling Nostalgic? Here's a list of songs from high school.`);
-    $("#songList").append("<li>" + (element.name + "-" + element.artists[0].name+ element.album.release_date.slice(0,4)) + "<br>" + ` <iframe src="https://open.spotify.com/embed/track/${element.id}" align="center" width="250" height="100" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>`);
+    $("#songList").append("<li>" + (element.album.release_date.slice(0,4)) + "<br>" + ` <iframe src="https://open.spotify.com/embed/track/${element.id}" align="center" width="250" height="100" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>`);
   });
 } 
 
