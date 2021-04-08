@@ -62,6 +62,7 @@ Provide your name and date of birth and chose a genre and this application will 
 
 Copyright 2021 Cat Denton, Faisal Rana, Karlson Drendel, Marni Sucher, Sofia Acosta
 
+
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
 The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
@@ -75,3 +76,4 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 * _Karlson Drendel <kdrendel99@gmail.com>_
 * _Marni Sucher <marni>_
 * _Sofia Acosta <sofiaacostarascon@gmail.com>_
+

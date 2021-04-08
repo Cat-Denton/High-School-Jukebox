@@ -47,7 +47,7 @@ async function outputSearch(genre,years) {
   const search = await SpotifyService.getSearch(token,genre,years);
   debugger
   search.tracks.items.forEach(function(element) {
-    $('.list').text(`Hello ${name}, here is a list of your personalized songs from high school:`);
+    $('.list').text(`Hello ${name}. Feeling Nostalgic? Here's a list of songs from high school.`);
     $("#songList").append("<li>" + element.name + "-" + element.artists[0].name + " (" + element.album.release_date.slice(0,4) + ")");
   });
 } 
